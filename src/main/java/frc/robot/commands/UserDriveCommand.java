@@ -25,7 +25,7 @@ public class UserDriveCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.driveTrainSubsystem.tankDrive(-Robot.m_oi.getControllerLeftY(), Robot.m_oi.getControllerRightY());
+    Robot.driveTrainSubsystem.tankDrive(-Robot.oi.getControllerLeftX(), Robot.oi.getControllerRightY());
     }
   
 

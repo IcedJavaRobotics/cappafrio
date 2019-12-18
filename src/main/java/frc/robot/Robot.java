@@ -27,12 +27,12 @@ import frc.robot.subsystems.GearShiftSubsystem;
  * project.
  */
 public class Robot extends TimedRobot {
-  public static OI m_oi;
+  public static OI oi;
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static DriveTrainSubsystem driveTrainSubsystem;
   public static ArmSubsystem armSubsystem;
   public static GearShiftSubsystem gearShiftSubsystem;
-  public static Compressor compressor;
+  //public static Compressor compressor;
 
 
   Command m_autonomousCommand;
@@ -48,10 +48,10 @@ public class Robot extends TimedRobot {
     driveTrainSubsystem = new DriveTrainSubsystem();
     armSubsystem = new ArmSubsystem();
     gearShiftSubsystem = new GearShiftSubsystem();
-    compressor = new Compressor(0);
-    compressor.setClosedLoopControl(true);
+    //compressor = new Compressor(0);
+    //compressor.setClosedLoopControl(true);
 
-    m_oi = new OI();
+    oi = new OI();
     // chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", m_chooser);
   }

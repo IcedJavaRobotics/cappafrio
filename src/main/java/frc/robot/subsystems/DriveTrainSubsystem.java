@@ -60,9 +60,14 @@ public class DriveTrainSubsystem extends Subsystem {
       right3.set(speed);
     }
     
-    public void tankDrive(double left, double right) {
-      moveLeftTrain(left);
-      moveRightTrain(right);
+    public void tankDrive(double Y, double X) {
+      //Arcade Code
+      moveLeftTrain(-Y - X);
+      moveRightTrain(-Y + X);
+
+      //Tank Code
+      //moveLeftTrain(left);   
+      //moveRightTrain(right);
     }
     
   @Override
